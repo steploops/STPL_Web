@@ -73,7 +73,7 @@ const Digital = () => {
         <motion.div variants={itemFadeUp} className="flex justify-start w-full">
           <button
             onClick={handleContactClick}
-            className="bg-[#9aa7d8] hover:bg-blue-800 transition px-5 py-2 text-white font-semibold rounded-md shadow-md text-sm"
+            className=" bg-gradient-to-r from-indigo-500 to-blue-400 transition px-5 py-2 text-white font-semibold rounded-md shadow-md text-sm"
           >
             Contact Us →
           </button>

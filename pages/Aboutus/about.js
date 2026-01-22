@@ -48,7 +48,7 @@ export default function About() {
       >
 
         {/* ⭐ UPDATED BANNER */}
-        <section className="relative w-full h-[260px] md:h-[360px] flex items-center justify-center text-center overflow-hidden">
+        <section className="relative w-full h-[260px] md:h-[400px] flex items-center justify-center text-center overflow-hidden">
           <Image
             src="/assets/building2.jpg"
             alt="Office Banner"
@@ -95,7 +95,7 @@ export default function About() {
         <SectionDivider />
 
         <div className="grid md:grid-cols-3 gap-6 px-6 max-w-6xl">
-          <HighlightBox title="Our Expertise" desc="We work in SAP , Web development developments, cloud , AI, CRM and many more." />
+          <HighlightBox title="Our Expertise" desc="Our expertise spans ERP platforms, Web and Application Development, and Corporate IT Trainings for modern enterprises." />
           <HighlightBox title="Trusted Technology Partner" desc="Delivering scalable and customer-focused solutions." />
           <HighlightBox title="Future-Driven Vision" desc="We combine innovation with business strategy to create impact." />
         </div>

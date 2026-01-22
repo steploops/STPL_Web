@@ -10,9 +10,10 @@ const services = [
   {
     id: "SAP-Services",
     title: "SAP Services",
-    text: "StepLoops Technology Pvt. Ltd. simplifies and expands your business operations with end-to-end SAP services. To evaluate your existing systems and create a customized SAP strategy, we start with a thorough consultation. To keep your environment safe and effective, our team continues to provide regular maintenance, updates, and optimization while managing the entire implementation with the least amount of disturbance. We assist you in overcoming difficult obstacles, improving performance, and optimizing the return on your SAP investment with the assistance of skilled SAP specialists.",
+    text: "Steploops Technology Pvt. Ltd. delivers end-to-end SAP implementation, system conversion, migration, and AMS services, aligned with RISE with SAP to support enterprise transformation to S/4HANA Cloud and hybrid landscapes. Our approach includes detailed system assessment, readiness checks, custom code adaptation, data migration, and integration planning to ensure a secure and low-risk transition.We offer deep expertise across advanced SAP technologies including SAP Business Technology Platform (BTP), SAP Joule, AI-enabled extensions, side-by-side development, and intelligent automation. Through proactive AMS, continuous optimization, and cloud-first architectures, we help organizations achieve operational excellence, scalability, and long-term value from their SAP investments.",
     image: "/assets/sapsolu.jpg",
   },
+  
   {
     id: "SAP-Solutions",
     title: "SAP Solutions",

@@ -24,10 +24,10 @@ const cardVariants = {
 };
 
 const overlayVariants = { initial: { opacity: 0 }, hover: { opacity: 1 } };
-const imageVariants = { initial: { opacity: 0 }, hover: { opacity: 0.65 } };
+const imageVariants = { initial: { opacity: 0 }, hover: { opacity: 0.8 } };
 const textVariants = {
   initial: { color: "#000", y: 0 },
-  hover: { color: "#fff", y: -2 },
+  hover: { color: "#fff", y: -1 },
 };
 const iconVariants = { initial: { scale: 1 }, hover: { scale: 1.08 } };
 
@@ -135,7 +135,7 @@ const ServiceCard = ({ id, title, description, icon, image, index }) => {
         </motion.h3>
 
         <motion.p
-          className="text-[11px] leading-snug"
+          className="text-[10px] leading-snug"
           variants={textVariants}
         >
           {description}

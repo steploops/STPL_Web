@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
@@ -38,7 +37,7 @@ const Home = () => {
   return (
     <div
       ref={homeRef}
-      className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[85vh] 
+      className="relative w-full h-[50vh] sm:h-[70vh] md:h-[80vh] lg:h-[85vh] 
       flex items-center px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 overflow-hidden"
     >
       {/* ---------- BACKGROUND VIDEO ---------- */}
