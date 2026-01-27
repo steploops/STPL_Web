@@ -24,12 +24,22 @@ const cardVariants = {
 };
 
 const overlayVariants = { initial: { opacity: 0 }, hover: { opacity: 1 } };
-const imageVariants = { initial: { opacity: 0 }, hover: { opacity: 0.8 } };
+const imageVariants = { initial: { opacity: 0 ,scale:1.1}, hover: { opacity: 0.5,scale:1 } };
 const textVariants = {
   initial: { color: "#000", y: 0 },
   hover: { color: "#fff", y: -1 },
 };
 const iconVariants = { initial: { scale: 1 }, hover: { scale: 1.08 } };
+
+const ServiceIcon = ({ emoji, label }) => (
+  <span 
+    role="img" 
+    aria-label={label} 
+    className="text-4xl block transition-transform duration-300"
+  >
+    {emoji}
+  </span>
+);
 
 // Services - Updated IDs to match the second component
 const servicesData = [
@@ -101,12 +111,12 @@ const ServiceCard = ({ id, title, description, icon, image, index }) => {
       className="
         relative cursor-pointer bg-[#f3f6fb]
         flex flex-col justify-between
-        h-full p-5 overflow-hidden 
+        h-full p-5 overflow-hidden group
       "
     >
       {/* Hover Image Overlay */}
       <motion.div
-        className="absolute inset-0 z-10 pointer-events-none"
+        className="absolute inset-0 z-10 pointer-events-none bg-black"
         variants={overlayVariants}
       >
         <motion.img
@@ -115,6 +125,7 @@ const ServiceCard = ({ id, title, description, icon, image, index }) => {
           className="absolute inset-0 w-full h-full object-cover"
           variants={imageVariants}
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
       </motion.div>
 
       {/* Icon */}
@@ -122,20 +133,22 @@ const ServiceCard = ({ id, title, description, icon, image, index }) => {
         className="z-20 mb-4 flex justify-center items-center"
         variants={iconVariants}
       >
-        {icon}
+        <div className="filter drop-shadow-md">
+           {icon}
+        </div>
       </motion.div>
 
       {/* Text */}
       <motion.div className="z-20 text-center" variants={textVariants}>
         <motion.h3
-          className="text-[15px] font-semibold leading-tight mb-1"
+          className="text-[15px] font-bold leading-tight mb-1 drop-shadow-lg"
           variants={textVariants}
         >
           {title}
         </motion.h3>
 
         <motion.p
-          className="text-[10px] leading-snug"
+          className="text-[10px] leading-snug font-medium drop-shadow-md"
           variants={textVariants}
         >
           {description}
