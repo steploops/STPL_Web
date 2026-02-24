@@ -6,7 +6,7 @@ import Home from "../components/Home";
 import HeroSection from "../components/HeroSection";
 import WorkingProcess from "../components/WorkingProcess";
 import ServicesGrid from "../components/ServicesGrid";
-// import Review from "../components/Review";
+import Review from "../components/Review";
 import Digital from "../components/Digital";
 import Footer from "../components/Footer";
 
@@ -56,9 +56,9 @@ export default function HomePage() {
           <Digital />
         </section>
 
-        {/* <section id="reviews">
+        <section id="reviews">
           <Review />
-        </section> */}
+        </section>
 
         <section id="process">
           <WorkingProcess />

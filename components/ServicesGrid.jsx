@@ -108,6 +108,7 @@ const ServiceCard = ({ id, title, description, icon, image, index }) => {
       animate="animate"
       whileHover="hover"
       custom={index}
+      whileTap="hover"  
       className="
         relative cursor-pointer bg-[#f3f6fb]
         flex flex-col justify-between
