@@ -37,7 +37,7 @@ const Home = () => {
   return (
     <div
       ref={homeRef}
-      className="relative w-full h-[50vh] sm:h-[70vh] md:h-[80vh] lg:h-[85vh] 
+      className="relative w-full min-h-[60svh] md:min-h-[75svh]
       flex items-center px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 overflow-hidden"
     >
       {/* ---------- BACKGROUND VIDEO ---------- */}

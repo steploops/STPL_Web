@@ -87,10 +87,11 @@ function BackToTopButton({ scrollYProgress }) {
       style={{ opacity }}
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       className="fixed bottom-8 right-8 z-50 p-4
-      backdrop-blur-xl bg-white/10 border border-white/20
-      rounded-full shadow-lg hover:shadow-purple-500/40
-      hover:scale-110 active:scale-95 transition-all
-      flex items-center justify-center"
+        bg-black hover:bg-neutral-800 text-white
+        rounded-full shadow-lg
+        hover:scale-110 active:scale-95
+        transition-all duration-300
+        flex items-center justify-center"
       aria-label="Back to Top"
     >
       <svg
