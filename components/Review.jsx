@@ -1,7 +1,7 @@
 import React from "react";
 
 const brands = [
-  { name: "The Dream Kitchens", logo: "/logos/crm-tdk.webp", variant: "circle" },
+  { name: "The Dream Kitchens", logo: "/logos/crm-tdk.png", variant: "circle" },
   { name: "Palo Alto", logo: "/logos/OIP.webp" },
   { name: "Hurla Hardware", logo: "/logos/hurla.webp" },
   { name: "Mentor Water Group", logo: "/logos/Mentor-Water-Pvt-Ltd-Logo-.png.webp" },
