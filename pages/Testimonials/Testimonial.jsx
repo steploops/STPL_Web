@@ -83,31 +83,44 @@ export default function ServicesPage() {
       <Navbar />
 
       {/* TOP BANNER */}
-      <section
-        className="relative h-[50vh] sm:h-[60vh] flex items-center justify-center bg-cover bg-center  bg-black/50"
-        style={{ backgroundImage: "url('/assets/service4.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-l from-indigo-900/80 via-black/50 to-black/70"></div>
-        <div className="relative z-10 text-center text-white px-4 sm:px-8">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-wide"
-          >
-            SERVICES
-          </motion.h1>
+<section className="relative w-full bg-[#f3f6fb]">
+          
+          {/* 1. Video Section */}
+          <div className="relativew-full min-h-[24svh] md:min-h-[40svh]
+      flex items-center px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover z-0"
+              src="/assets/hero.mp4" 
+            />
+            <div className="absolute inset-0 bg-black/30 z-0"></div>
+          </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-gray-300 mt-3 sm:mt-4 text-base sm:text-lg max-w-2xl mx-auto"
-          >
-            Empowering innovation through technology and design
-          </motion.p>
-        </div>
-      </section>
+          {/* 2. Floating CTA Banner (Replaced the navy text box) */}
+          <div className="max-w-[1200px] mx-auto px-2 md:px-4 relative">
+            <div className="absolute -top-1/2 left-1/2 translate-y-1/2 w-[85%] md:w-[75%] z-15">
+              <div className="bg-gradient-to-r from-[#7A6CF6] to-[#4f38ea] px-6 py-5 md:px-10 md:py-8 rounded-xl shadow-2xl flex flex-col md:flex-row items-center justify-between text-white">
+                
+                <div className="text-center md:text-left">
+                  <h3 className="text-xl md:text-2xl font-semibold tracking-tight">
+                    Services
+                  </h3>
+                  <p className="text-white/80 text-sm mt-1">
+                    Empowering innovation through technology and design
+                  </p>
+                </div>
+
+                
+              </div>
+            </div>
+          </div>
+
+          {/* Spacing to compensate for the absolute banner height */}
+          <div className="h-20 md:h-32"></div>
+        </section>
 
       {/* SERVICES SECTIONS */}
       <section className="py-16 sm:py-20 flex-grow">

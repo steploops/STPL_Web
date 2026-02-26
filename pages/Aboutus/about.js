@@ -1,4 +1,3 @@
-"use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -48,25 +47,43 @@ export default function About() {
       >
 
         {/* ⭐ UPDATED BANNER */}
-        <section className="relative w-full h-[260px] md:h-[400px] flex items-center justify-center text-center overflow-hidden">
-          <Image
-            src="/assets/building2.jpg"
-            alt="Office Banner"
-            fill
-            className="object-cover"
-          />
+<section className="relative w-full bg-[#f3f6fb]">
+          
+          {/* 1. Video Section */}
+          <div className="relativew-full min-h-[24svh] md:min-h-[40svh]
+      flex items-center px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover z-0"
+              src="/assets/hero.mp4" 
+            />
+            <div className="absolute inset-0 bg-black/30 z-0"></div>
+          </div>
 
-          {/* ⚡ Higher opacity for better text readability */}
-          <div className="absolute inset-0 bg-black/60" />
+          {/* 2. Floating CTA Banner (Replaced the navy text box) */}
+          <div className="max-w-[1200px] mx-auto px-2 md:px-4 relative">
+            <div className="absolute -top-1/2 left-1/2 translate-y-1/2 w-[85%] md:w-[75%] z-15">
+              <div className="bg-gradient-to-r from-[#7A6CF6] to-[#4f38ea] px-6 py-5 md:px-10 md:py-8 rounded-xl shadow-2xl flex flex-col md:flex-row items-center justify-between text-white">
+                
+                <div className="text-center md:text-left">
+                  <h3 className="text-xl md:text-2xl font-semibold tracking-tight">
+                    About Us
+                  </h3>
+                  <p className="text-white/80 text-sm mt-1">
+                    Let's build something innovative together.
+                  </p>
+                </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="relative z-10 text-4xl md:text-5xl font-bold text-white tracking-wide drop-shadow-xl"
-          >
-            About Us
-          </motion.h1>
+                
+              </div>
+            </div>
+          </div>
+
+          {/* Spacing to compensate for the absolute banner height */}
+          <div className="h-20 md:h-32"></div>
         </section>
 
         {/* About Description */}
