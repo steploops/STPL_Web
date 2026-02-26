@@ -48,43 +48,41 @@ export default function About() {
 
         {/* ⭐ UPDATED BANNER */}
 <section className="relative w-full bg-[#f3f6fb]">
-          
-          {/* 1. Video Section */}
-          <div className="relativew-full min-h-[24svh] md:min-h-[40svh]
-      flex items-center px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover z-0"
-              src="/assets/hero.mp4" 
-            />
-            <div className="absolute inset-0 bg-black/30 z-0"></div>
-          </div>
+  {/* 1. Video & Content Container */}
+  {/* We use 'flex-col' and 'justify-end' to place the banner at the bottom edge */}
+  <div className="relative w-full min-h-[30svh] md:min-h-[45svh] flex flex-col justify-end items-center">
+    
+    {/* Video Background */}
+    <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      className="absolute inset-0 w-full h-full object-cover z-0"
+      src="/assets/hero.mp4" 
+    />
+    <div className="absolute inset-0 bg-black/30 z-0"></div>
 
-          {/* 2. Floating CTA Banner (Replaced the navy text box) */}
-          <div className="max-w-[1200px] mx-auto px-2 md:px-4 relative">
-            <div className="absolute -top-1/2 left-1/2 translate-y-1/2 w-[85%] md:w-[75%] z-15">
-              <div className="bg-gradient-to-r from-[#7A6CF6] to-[#4f38ea] px-6 py-5 md:px-10 md:py-8 rounded-xl shadow-2xl flex flex-col md:flex-row items-center justify-between text-white">
-                
-                <div className="text-center md:text-left">
-                  <h3 className="text-xl md:text-2xl font-semibold tracking-tight">
-                    About Us
-                  </h3>
-                  <p className="text-white/80 text-sm mt-1">
-                    Let's build something innovative together.
-                  </p>
-                </div>
+    {/* 2. CTA Banner */}
+    {/* By using '-mb-10', we overlap the bottom edge perfectly without absolute positioning */}
+    <div className="relative z-10 w-[90%] md:w-[75%] max-w-[1200px] -mb-10 md:-mb-14">
+      <div className="bg-gradient-to-r from-[#7A6CF6] to-[#4f38ea] px-6 py-5 md:px-10 md:py-8 rounded-xl shadow-2xl flex flex-col md:flex-row items-center justify-between text-white">
+        <div className="text-center md:text-left">
+          <h3 className="text-xl md:text-2xl font-semibold tracking-tight">
+            About Us
+          </h3>
+          <p className="text-white/80 text-sm mt-1">
+            Let's build something innovative together.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-                
-              </div>
-            </div>
-          </div>
-
-          {/* Spacing to compensate for the absolute banner height */}
-          <div className="h-20 md:h-32"></div>
-        </section>
+  {/* 3. Responsive Spacer */}
+  {/* Now we only need a small amount of space to account for the overlap */}
+  <div className="h-16 md:h-24"></div>
+</section>
 
         {/* About Description */}
         <motion.div
