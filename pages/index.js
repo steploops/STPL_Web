@@ -35,6 +35,8 @@ export default function HomePage() {
           name="description" 
           content="Transform your digital presence with our expert services in web development, design, and strategy. We help brands grow through innovative digital experiences." 
         />
+        {/* Add Keywords (though less powerful than they used to be, they help some crawlers) */}
+        <meta name="keywords" content="SAP Innovation, Custom Software, AI Solutions, Web Development,Software Development Dehradun" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://yourdomain.com" />
