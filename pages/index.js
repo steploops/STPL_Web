@@ -30,7 +30,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-black text-white overflow-x-hidden relative">
       {/* --- SEO SECTION --- */}
       <Head>
-        <title> Steploops | Creative Digital Solutions & Strategy</title>
+        <title> Steploops | Software Company Dehradun | SAP services</title>
         <meta 
           name="description" 
           content="Transform your digital presence with our expert services in web development, design, and strategy. We help brands grow through innovative digital experiences." 
