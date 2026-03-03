@@ -1,4 +1,5 @@
 "use client";
+import Head from "next/head"; // Required for SEO
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useEffect } from "react";
 import Navbar from "../components/Navbar";
@@ -27,6 +28,29 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden relative">
+      {/* --- SEO SECTION --- */}
+      <Head>
+        <title> Steploops | Creative Digital Solutions & Strategy</title>
+        <meta 
+          name="description" 
+          content="Transform your digital presence with our expert services in web development, design, and strategy. We help brands grow through innovative digital experiences." 
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://yourdomain.com" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://yourdomain.com/" />
+        <meta property="og:title" content="Your Brand Name | Creative Digital Solutions" />
+        <meta property="og:description" content="Expert web development and digital strategy services." />
+        <meta property="og:image" content="https://yourdomain.com/og-image.jpg" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content="Your Brand Name" />
+        <meta property="twitter:description" content="Expert web development and digital strategy services." />
+      </Head>
 
       {/* Scroll Progress Bar */}
       <motion.div
@@ -37,9 +61,8 @@ export default function HomePage() {
 
       <Navbar />
 
-      {/* All Components Load Instantly */}
       <main className="flex flex-col space-y-0">
-
+        {/* Ensure one of these components contains an <h1> tag */}
         <section id="home">
           <Home />
         </section>
@@ -63,19 +86,14 @@ export default function HomePage() {
         <section id="process">
           <WorkingProcess />
         </section>
-
       </main>
 
       <Footer />
       <BackToTopButton scrollYProgress={scrollYProgress} />
-
     </div>
   );
 }
 
-// -----------------------------------------------------------
-// Modern Floating Back To Top Button
-// -----------------------------------------------------------
 function BackToTopButton({ scrollYProgress }) {
   const opacity = useSpring(scrollYProgress, {
     stiffness: 120,
