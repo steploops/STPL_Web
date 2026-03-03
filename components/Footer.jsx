@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 const Footer = () => {
   const router = useRouter();
 
-  // 👉 Redirect to Testimonial.jsx page
   const handleContactClick = () => {
     router.push("/contact");
   };
@@ -20,7 +19,8 @@ const Footer = () => {
 
           <button
             onClick={handleContactClick}
-            className="mt-3 md:mt-0 bg-[#1A1A1A] hover:bg-black text-white px-5 py-2 rounded-md transition shadow-md"
+            className="mt-3 md:mt-0 bg-[#1A1A1A] hover:bg-black text-white px-5 py-2 rounded-md transition shadow-md focus:ring-2 focus:ring-white outline-none"
+            aria-label="Contact us about your next project"
           >
             Contact us
           </button>
@@ -33,7 +33,11 @@ const Footer = () => {
 
           {/* Column 1: Logo + About */}
           <div>
-            <img src="/assets/logo-crop.png" alt="logo" className="h-10 mb-4" />
+            <img 
+              src="/assets/logo-crop.png" 
+              alt="Steploops Technologies Logo" // Improved Alt Text
+              className="h-10 mb-4" 
+            />
             <p className="text-sm text-white/80 leading-relaxed">
               We provide top-tier IT solutions including hardware, software,
               networking, and digital services.
@@ -41,14 +45,14 @@ const Footer = () => {
           </div>
 
           {/* Column 2: Company Links */}
-          <div>
+          <nav aria-label="Footer Navigation"> {/* Added nav for SEO semantics */}
             <h3 className="font-bold mb-3 text-base">Company</h3>
             <ul className="space-y-2 text-white/70 text-sm">
-              <li><Link href="/Aboutus/about">About us</Link></li>
-              <li><Link href="/Testimonials/Testimonial">Services</Link></li>
-              <li><Link href="/contact">Contact us</Link></li>
+              <li><Link href="/Aboutus/about" className="hover:text-white transition">About us</Link></li>
+              <li><Link href="/Testimonials/Testimonial" className="hover:text-white transition">Services</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition">Contact us</Link></li>
             </ul>
-          </div>
+          </nav>
 
           {/* Column 3: Social Icons */}
           <div>
@@ -58,26 +62,32 @@ const Footer = () => {
               <a
                 href="https://instagram.com/steploops_technologies/"
                 target="_blank"
+                rel="noopener noreferrer" // Security best practice
                 className="hover:text-[#E1306C] transition"
+                aria-label="Follow Steploops on Instagram" // Critical for SEO/Accessibility
               >
-                <i className="fab fa-instagram"></i>
+                <i className="fab fa-instagram" aria-hidden="true"></i>
               </a>
 
               <a
                 href="https://linkedin.com/company/steploops-technologies-pvt-ltd/"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-[#0077B5] transition"
+                aria-label="Follow Steploops on LinkedIn"
               >
-                <i className="fab fa-linkedin-in"></i>
+                <i className="fab fa-linkedin-in" aria-hidden="true"></i>
               </a>
 
-              <a
+              {/* <a
                 href="https://discord.com"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-[#5865F2] transition"
+                aria-label="Join our Discord community"
               >
-                <i className="fab fa-discord"></i>
-              </a>
+                <i className="fab fa-discord" aria-hidden="true"></i>
+              </a> */}
             </div>
           </div>
 
@@ -89,7 +99,7 @@ const Footer = () => {
               <span className="text-white/80 block">Need help? Call us</span>
               <a
                 href="tel:+919634701727"
-                className="text-[#34a6ff] font-semibold"
+                className="text-[#34a6ff] font-semibold hover:underline"
               >
                 +91 9634701727
               </a>
@@ -97,7 +107,7 @@ const Footer = () => {
 
             <a
               href="mailto:info@steploops.com"
-              className="text-white/80 text-sm block"
+              className="text-white/80 text-sm block hover:underline"
             >
               info@steploops.com
             </a>
@@ -108,7 +118,9 @@ const Footer = () => {
         {/* Divider */}
         <div className="w-full h-px bg-white/20 mt-8 mb-3"></div>
 
-        <p className="text-white/60 text-sm">Copyright © Steploops Technologies Pvt. Ltd. All rights reserved</p>
+        <p className="text-white/60 text-sm">
+          Copyright © {new Date().getFullYear()} Steploops Technologies Pvt. Ltd. All rights reserved
+        </p>
       </div>
     </footer>
   );
