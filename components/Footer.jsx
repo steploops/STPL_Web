@@ -60,7 +60,7 @@ const Footer = () => {
 
             <div className="flex space-x-5 text-xl">
               <a
-                href="https://instagram.com/steploops_technologies/"
+                href="https://instagram.com/steploops.technologies/"
                 target="_blank"
                 rel="noopener noreferrer" // Security best practice
                 className="hover:text-[#E1306C] transition"
